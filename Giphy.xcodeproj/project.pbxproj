@@ -27,6 +27,7 @@
 		B8FC1983294E794500DF78F1 /* GiphyURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1972294E794500DF78F1 /* GiphyURLSessionProtocol.swift */; };
 		B8FC1984294E794500DF78F1 /* GiphyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1973294E794500DF78F1 /* GiphyURLSession.swift */; };
 		B8FC1986294E794500DF78F1 /* Data+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1976294E794500DF78F1 /* Data+Gif.swift */; };
+		E03CE36829707C71005EC927 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CE36729707C71005EC927 /* AlertModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		B8FC1972294E794500DF78F1 /* GiphyURLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyURLSessionProtocol.swift; sourceTree = "<group>"; };
 		B8FC1973294E794500DF78F1 /* GiphyURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyURLSession.swift; sourceTree = "<group>"; };
 		B8FC1976294E794500DF78F1 /* Data+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Gif.swift"; sourceTree = "<group>"; };
+		E03CE36729707C71005EC927 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				B8FC1961294E794500DF78F1 /* GiphyError.swift */,
 				B8FC1962294E794500DF78F1 /* GiphyModel.swift */,
 				B8FC1963294E794500DF78F1 /* GiphyAPIModel.swift */,
+				E03CE36729707C71005EC927 /* AlertModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				B86EC752294E75280050617B /* SceneDelegate.swift in Sources */,
 				B8FC1986294E794500DF78F1 /* Data+Gif.swift in Sources */,
 				B8FC1978294E794500DF78F1 /* GiphyModel.swift in Sources */,
+				E03CE36829707C71005EC927 /* AlertModel.swift in Sources */,
 				B8FC197A294E794500DF78F1 /* GiphyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +411,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -435,6 +440,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
