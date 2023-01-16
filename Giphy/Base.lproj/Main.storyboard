@@ -28,13 +28,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Гифка:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adW-Y3-bb5" userLabel="GifLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="317" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="312.66666666666669" height="24"/>
                                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                                 <color key="textColor" name="YPWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hz-mv-tKe" userLabel="IndexLabel">
-                                                <rect key="frame" x="317" y="0.0" width="36" height="24"/>
+                                                <rect key="frame" x="312.66666666666669" y="0.0" width="40.333333333333314" height="24"/>
                                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                                 <color key="textColor" name="YPWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -116,9 +116,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dislikeButton" destination="VhF-CI-igf" id="BIO-Pm-zdd"/>
                         <outlet property="giphyActivityIndicatorView" destination="ffa-a1-m1O" id="cra-TY-q2f"/>
                         <outlet property="giphyImageView" destination="0ew-sA-UfI" id="LdZ-pL-5hP"/>
                         <outlet property="indexLabel" destination="2hz-mv-tKe" id="21E-Bj-ziJ"/>
+                        <outlet property="likeButton" destination="A6a-C5-TSY" id="1AU-W0-bAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

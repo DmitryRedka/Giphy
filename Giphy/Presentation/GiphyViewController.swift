@@ -19,6 +19,8 @@ final class GiphyViewController: UIViewController {
     // Например -- @IBOutlet weak var giphyImageView: UIImageView!
     @IBOutlet weak var giphyImageView: UIImageView!
     
+    @IBOutlet weak var dislikeButton: UIButton!
+    @IBOutlet weak var likeButton: UIButton!
     // @IBOutlet UIActivityIndicatorView загрузки гифки, так как она может загрухаться долго
     @IBOutlet weak var giphyActivityIndicatorView: UIActivityIndicatorView!
 
@@ -26,16 +28,24 @@ final class GiphyViewController: UIViewController {
     @IBAction func onYesButtonTapped() {
         counterLikedGif += 1
         presenter.saveGif(giphyImageView.image)
+        highlitImageBorder(isLikedGif: true)
+
         if showGifCounter == amountGif {
             
             showEndOfGiphy()
-            
+           
         } else {
             showGifCounter += 1
+            
             indexLabel.text = "\(showGifCounter)/\(amountGif)"
             presenter.fetchNextGiphy()
             
         }
+        
+        
+        
+
+
         
         
         // Проверка на то просмотрели или нет 10 гифок
@@ -55,7 +65,7 @@ final class GiphyViewController: UIViewController {
 
     // Нажатие на кнопку дизлайка
     @IBAction func onNoButtonTapped() {
-
+        highlitImageBorder(isLikedGif: false)
         if showGifCounter == amountGif {
             
             showEndOfGiphy()
@@ -92,6 +102,26 @@ final class GiphyViewController: UIViewController {
 
         restart()
     }
+    
+    func highlitImageBorder (isLikedGif: Bool) {
+        guard let YPGreen = UIColor(named: "YPGreen"), let YPRed = UIColor(named: "YPRed") else {
+            return
+        }
+        giphyImageView.layer.masksToBounds = true
+        giphyImageView.layer.borderWidth = 8
+        if isLikedGif {
+            giphyImageView.layer.borderColor = YPGreen.cgColor
+        } else {
+            giphyImageView.layer.borderColor = YPRed.cgColor
+        }
+        
+    }
+    
+    func buttonsEnable(isEnabled: Bool) {
+        likeButton.isEnabled = isEnabled
+        dislikeButton.isEnabled = isEnabled
+    }
+
 }
 
 // MARK: - Приватные методы
@@ -192,3 +222,5 @@ extension GiphyViewController: GiphyViewControllerProtocol {
         giphyActivityIndicatorView.stopAnimating()
     }
 }
+
+
