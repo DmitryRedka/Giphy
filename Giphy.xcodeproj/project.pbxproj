@@ -28,6 +28,7 @@
 		B8FC1984294E794500DF78F1 /* GiphyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1973294E794500DF78F1 /* GiphyURLSession.swift */; };
 		B8FC1986294E794500DF78F1 /* Data+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC1976294E794500DF78F1 /* Data+Gif.swift */; };
 		E03CE36829707C71005EC927 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CE36729707C71005EC927 /* AlertModel.swift */; };
+		E03CE36A29785EE7005EC927 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03CE36929785EE7005EC927 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B8FC1973294E794500DF78F1 /* GiphyURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiphyURLSession.swift; sourceTree = "<group>"; };
 		B8FC1976294E794500DF78F1 /* Data+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Gif.swift"; sourceTree = "<group>"; };
 		E03CE36729707C71005EC927 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		E03CE36929785EE7005EC927 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				B8FC1976294E794500DF78F1 /* Data+Gif.swift */,
+				E03CE36929785EE7005EC927 /* UIColor+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8FC1984294E794500DF78F1 /* GiphyURLSession.swift in Sources */,
+				E03CE36A29785EE7005EC927 /* UIColor+Extension.swift in Sources */,
 				B8FC1980294E794500DF78F1 /* GiphyFactoryProtocol.swift in Sources */,
 				B8FC1982294E794500DF78F1 /* GiphyModelMapper.swift in Sources */,
 				B8FC1983294E794500DF78F1 /* GiphyURLSessionProtocol.swift in Sources */,

@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 import Photos
 
@@ -16,13 +15,8 @@ final class GiphyPresenter: GiphyPresenterProtocol {
         self.giphyFactory.delegate = self
     }
 
-    // Загрузка следующей гифки
     func fetchNextGiphy() {
-        // Необходимо показать лоадер
-        // Например -- viewController.showLoader()
         viewController?.showLoader()
-        // Обратиться к фабрике и начать грузить новую гифку
-        // Например -- giphyFactory.requestNextGiphy()
         giphyFactory.requestNextGiphy()
     }
 
@@ -37,6 +31,28 @@ final class GiphyPresenter: GiphyPresenterProtocol {
             request.addResource(with: .photo, data: data, options: nil)
         })
     }
+    
+    func proceedToNextGif() {
+        viewController?.buttonsEnable(isEnabled: false)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.viewController?.hideBoarder()
+            self.fetchNextGiphy()
+            self.viewController?.buttonsEnable(isEnabled: true)
+        })
+    }
+    func createAlert(alertModel: AlertModel) -> UIAlertController {
+        
+        let alert = UIAlertController(title: alertModel.title,
+                                      message: alertModel.message,
+                                      preferredStyle: .alert)
+        alert.view.accessibilityIdentifier = "ResultAlert"
+        let action = UIAlertAction(title: alertModel.buttonText, style: .default, handler: alertModel.completion)
+        alert.addAction(action)
+        return alert
+    }
 }
 
 // MARK: - GiphyFactoryDelegate
@@ -47,11 +63,6 @@ extension GiphyPresenter: GiphyFactoryDelegate {
         // Преобразуем набор картинок в гифку
         let image = UIImage.gif(url: giphy.url)
 
-        // !Обратите внимание в каком потоке это вызывается и нужно ли вызывать дополнительно!
-        // DispatchQueue.main.async { [weak self] in
-        //
-        // Останавливаем индикатор загрузки -- viewController.hideHoaler()
-        // Показать гифку -- viewController.showGiphy(image)
         DispatchQueue.main.async { [weak self] in
             
             self?.viewController?.hideHoaler()
@@ -61,11 +72,6 @@ extension GiphyPresenter: GiphyFactoryDelegate {
 
     // При загрузке гифки произошла ошибка
     func didReciveError(_ error: GiphyError) {
-        // !Обратите внимание в каком потоке это вызывается и нужно ли вызывать дополнительно!
-        // DispatchQueue.main.async { [weak self] in
-        //
-        // Останавливаем индикатор загрузки -- viewController.hideHoaler()
-        // Показать ошибку -- viewController.showError()
         DispatchQueue.main.async { [weak self] in
             self?.viewController?.hideHoaler()
             self?.viewController?.showError()

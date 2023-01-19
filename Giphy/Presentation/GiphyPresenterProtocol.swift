@@ -11,4 +11,8 @@ protocol GiphyPresenterProtocol: AnyObject {
     // Сохранение гифки в файлы
     func saveGif(_ image: UIImage?)
     
+    func proceedToNextGif()
+    
+    func createAlert(alertModel: AlertModel) -> UIAlertController 
+    
 }

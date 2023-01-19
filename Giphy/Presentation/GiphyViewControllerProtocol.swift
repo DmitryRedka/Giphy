@@ -13,4 +13,8 @@ protocol GiphyViewControllerProtocol: AnyObject {
 
     // Закончить показывать индикатор загрузки гифки
     func hideHoaler()
+    
+    func buttonsEnable(isEnabled: Bool)
+    
+    func hideBoarder()
 }
